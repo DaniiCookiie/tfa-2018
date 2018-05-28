@@ -118,13 +118,13 @@
     $('#hugridButton').append('<span id="hugbuttonOFF" style="display:none;">OFF</span>');
 
     /* On/Off Button - click functionality */
-    // $('#hugridButton').click(function () {
+    $('#hugridButton').click(function () {
       $('#hugridButton').toggleClass('buttonisoff') ;
       $('#hugrid').toggle();
       $('#hugridRows').toggle();
       $("#hugridButton span").toggle();
       window.hugrid.toggleState() ;
-    // });    
+    });    
   };
   
 

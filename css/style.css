@@ -14,6 +14,7 @@ h2{
     line-height: 80px;
     text-transform: uppercase;
     margin: 0;
+    line-height: 1.7em;
 }
 h3{
     font-family: 'Lobster', cursive;
@@ -105,7 +106,7 @@ ul{
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 230px;
+    padding-right: 280px;
 }
 .menu__list li{
     margin-left: 70px;
@@ -114,7 +115,7 @@ ul{
 .header__wrapper{
     background: #82cbfe;
 }
-.header__content{
+.header .content{
     margin: 0 auto;
     width: 1440px;
 }
@@ -135,8 +136,8 @@ ul{
 .pinguin{
     width: 18%;
     position: relative;
-    left: 4.6%;
-    top: 75px;
+    left: 3.1%;
+    top: 125px;
     z-index: 1001;
 }
 .pinguin__body{
@@ -349,9 +350,6 @@ section{
     background-repeat: no-repeat;
     background-position: center 20%, -10% center, 120% bottom;
     background-size: 20%, 30%, 40%;
-}
-.why h2{
-    line-height: 1.7em;
 }
 .why__content__text{
     width: 50%;
@@ -570,4 +568,155 @@ section{
     95%   {transform: rotate(10deg)}
     97.5% {transform: rotate(-10deg)}
     100%  {transform: rotate(0deg)}
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1440px){
+    .header .content{
+        width: 960px;
+    }
+    .logo{
+        width: 40%;
+    }
+    .pinguin{
+        width: 25%;
+    }
+    .container{
+        width: 960px;
+    }
+    .nuage:nth-child(1){
+        width: 30%;
+    }
+    .nuage:nth-child(2){
+        width: 23%;
+    }
+    .nuage:nth-child(3){
+        width: 13%;
+    }
+    .nuage:nth-child(4){
+        width: 20%;
+    }
+    .nuage:nth-child(5){
+        width: 13%;
+    }
+    .nuage:nth-child(6){
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .header .content{
+        width: 94%;
+    }
+    .container{
+        width: 94%;
+    }
+    .content__flex{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 40px 0;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .box{
+        width: 30%;
+        margin: 3%;
+    }
+    .avantage li{
+       width: 65%;
+       z-index: 5;
+    }
+    .avantage ul{
+        height: initial;
+    }
+    .avantage li:nth-child(1), .avantage li:nth-child(2), .avantage li:nth-child(3) {
+        padding-right: 0;
+    }
+    .avantage h2{
+        text-align: center;
+        margin: 0;
+    }
+    .concept{
+        padding-top: 100px;
+    }
+    .citation blockquote{
+        font-size: 1.2em;
+    }
+    .slider__infos{
+        top: 40%;
+    }
+    .slide__content{
+        top: 20%;
+        font-size: 0.93em;
+    }
+    .conclusion {
+        margin-top: 45%;
+    }
+    .menu__list{
+        padding-right: 0;
+        justify-content: space-around;
+
+    }
+    .menu__list li{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        font-size: 16px;
+    }
+    .header .content{
+        width: 96%;
+    }
+    .pinguin__eyes::before, .pinguin__eyes::after{
+        width: 7px;
+    }
+    .container{
+        width: 96%;
+        flex-direction: column;
+    }
+    .concept .content{
+        width: 70%;
+    }
+    .avantage li{
+        width: 80%;
+    }
+    .box{
+        width: 45%;
+    }
+    .why__content__text{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .why__content__text--right{
+        padding-top: 50px;
+        float: initial;
+    }
+    .slide__img{
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+    .slide__content{
+        width: 60%;
+        left: 15%;
+        top: 40%;
+    }
+    .slider__infos{
+        left: 35%;
+        top: 35%;
+    }
+    .conclusion{
+        margin-top: 63%;
+    }
+    .footer .container{
+        flex-direction: row;
+    }
+    .footer .container > p, .footer .container > .content, .footer .container > nav{
+        width: 30%;
+    }
+    @media screen and (max-width: 768px){
+    }
 }
