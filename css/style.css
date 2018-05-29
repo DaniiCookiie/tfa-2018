@@ -245,6 +245,11 @@ section{
 .link:hover{
     color: #fff;
 }
+.link--active::after{
+    width: 100%;
+    left:0;
+    background-color: #fff;
+}
 .hidden{
     display: none;
 }
@@ -366,11 +371,11 @@ section{
 }
 .why__content__text{
     width: 37%;
-    padding-left: 160px;
+    padding-left: 15%;
 }
 .why__content__text--right{
     margin-top: 100px;
-    padding-left: 550px;
+    padding-left: 51%;
 }
 
 /* CITATION */
@@ -415,9 +420,7 @@ section{
     padding: 5% 8%;
     box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
 }
-.slide__content p{
-    width: 85%;
-}
+
 .slider__infos{
     position: absolute;
     color: #df1653;
@@ -632,6 +635,24 @@ section{
     .header .content{
         width: 94%;
     }
+    .nuage:nth-child(1){
+        top: 12%;
+    }
+    .nuage:nth-child(2){
+        top: 12%;
+    }
+    .nuage:nth-child(3){
+        top: 70%;
+    }
+    .nuage:nth-child(4){
+        top: 70%;
+    }
+    .nuage:nth-child(5){
+        top: 65%;
+    }
+    .nuage:nth-child(6){
+        top: 55%;
+    }    
     .container{
         width: 94%;
     }
@@ -642,6 +663,14 @@ section{
     }
     h2{
         font-size: 1.5em;
+    }
+    .concept{
+        background-size: 60%, 20%;
+        background-position-y: 25%, 65%;
+        background-position-x: -30%, 75%;
+    }
+    .concept .content{
+        padding-left: 10%;
     }
     .box{
         width: 30%;
@@ -663,6 +692,12 @@ section{
     }
     .concept{
         padding-top: 100px;
+    }  
+    .why__content__text{
+        width: 45%;
+    }
+    .why__content__text--right{
+        padding-left: 45%;
     }
     .citation blockquote{
         font-size: 1.2em;
@@ -673,6 +708,7 @@ section{
     .slide__content{
         top: 20%;
         font-size: 0.93em;
+        width: 47%;
     }
     .conclusion {
         margin-top: 45%;
@@ -685,6 +721,13 @@ section{
     .menu__list li{
         margin: 0;
     }
+    .footer .container{
+        flex-direction: row;
+        width: 70%;
+    }
+    .footer .container > p, .footer .container > .content, .footer .container > nav{
+        width: 45%;
+    }
 }
 @media screen and (max-width: 768px){
     body{
@@ -693,15 +736,31 @@ section{
     .header .content{
         width: 96%;
     }
+    .pinguin{
+        left: 0;
+        margin: 0 auto;
+    }
     .pinguin__eyes::before, .pinguin__eyes::after{
-        width: 7px;
+        width: 6px;
+    }
+    .pinguin__eyes::after{
+        left: -21px;
+    }
+    .pinguin__eyes::before{
+        left: 10px;
     }
     .container{
         width: 96%;
         flex-direction: column;
     }
+    .concept{
+        background-size: 60%, 25%;
+        background-position-y: 25%, 100%;
+        background-position-x: -30%, 50%;
+    }
     .concept .content{
         width: 70%;
+        margin-bottom: 100px;
     }
     .avantage li{
         width: 80%;
@@ -712,6 +771,7 @@ section{
     .why__content__text{
         width: 70%;
         margin: 0 auto;
+        padding:0;
     }
     .why__content__text--right{
         padding-top: 50px;
@@ -725,21 +785,44 @@ section{
     .slide__content{
         width: 60%;
         left: 15%;
-        top: 40%;
+        top: 37%;
     }
     .slider__infos{
         left: 35%;
-        top: 35%;
+        top: 32%;
     }
     .conclusion{
-        margin-top: 63%;
+        margin-top: 73%;
     }
-    .footer .container{
-        flex-direction: row;
+    @keyframes eyes-movement{
+        0%   {left: 50%; top: 13%;}
+        15%	 {left: 50%; top: 13%;} 
+        20%	 {left: 52%; top: 12%;}
+        30%  {left: 52%; top: 12%;}
+        35%  {left: 48%; top: 12%;}
+        45%  {left: 48%; top: 12%;}
+        50%  {left: 50%; top: 13%;}
+        100% {left: 50%; top: 13%;}
     }
-    .footer .container > p, .footer .container > .content, .footer .container > nav{
-        width: 30%;
-    }
-    @media screen and (max-width: 768px){
+    @keyframes eyes-blink{
+        0%    {height:6px}
+        3%    {height:1px}
+        5%    {height:6px}
+        15%   {height:6px}
+        18%   {height:1px}
+        20%   {height:6px}
+        30%   {height:6px}
+        33%   {height:1px}
+        35%   {height:6px}
+        45%   {height:6px}
+        48%   {height:1px}
+        50%   {height:6px}
+        60%   {height:6px}
+        63%   {height:1px}
+        65%   {height:6px}
+        72%   {height:6px}
+        75%   {height:1px}
+        98%   {height:1px}
+        100%  {height:6px}
     }
 }
