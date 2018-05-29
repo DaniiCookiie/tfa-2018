@@ -37,7 +37,7 @@ ul{
 }
 .container{
     margin: 0 auto;
-    width: 1122px;
+    width: 1075px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -198,10 +198,12 @@ section{
 .curve {
     width: 100%;
     height: 120px;
+    z-index: 1;
 }
 .curve--bottom {
     position: absolute;
     bottom: -120px;
+    z-index: 1;
 }
 .content__flex{
     width: 100%;
@@ -251,19 +253,27 @@ section{
 
 .concept{
     padding-top: 180px;
-    background: url("../img/nuage2.png");
+    background: url("../img/nuage2.png"), url("../img/nid.png");
     background-repeat: no-repeat;
-    background-position-x: 5%;
-    background-position-y: 100%;
-    background-size: 45%;
-    z-index: 5;
+    background-position-x: 5%, 75%;
+    background-position-y: 100%, 65%;
+    background-size: 45%, 15%;
+    z-index: -5;
 }
 .concept .content{
-    width: 50%;
+    width: 40%;
 }
 
 /* AVANTAGE */
 
+.avantage{
+    background: url('../img/nuage8.png'), url('../img/nuage7.png'), url('../img/nuage8.png'), url('../img/nuage7.png');
+    background-repeat: no-repeat;
+    background-position-x: 7%, -10%, 100%, 110%;
+    background-position-y: 115%, 170%, 120%, 70%;
+    background-size: 20%, 30%, 25%, 35%;
+    z-index: 5;
+}
 .avantage .content{
     width: 73.5%;
     margin: 0 auto;
@@ -318,6 +328,9 @@ section{
 .principe h2{
     text-align: center;
 }
+.principe .content{
+    width: 50%;
+}
 .box{
     position: relative;
     background-color: #fff;
@@ -352,11 +365,12 @@ section{
     background-size: 20%, 30%, 40%;
 }
 .why__content__text{
-    width: 50%;
+    width: 37%;
+    padding-left: 160px;
 }
 .why__content__text--right{
     margin-top: 100px;
-    float: right;
+    padding-left: 550px;
 }
 
 /* CITATION */
@@ -370,7 +384,7 @@ section{
     margin: 40px auto;
     width: 65%;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.7em;
     font-family:  'Montserrat', sans-serif;
     z-index: 5;
@@ -395,11 +409,14 @@ section{
 .slide__content{
     position: absolute;
     background: #fff;
-    width: 45%;
+    width: 38%;
     right: 0;
     top: 27%;
-    padding: 5%;
+    padding: 5% 8%;
     box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
+}
+.slide__content p{
+    width: 85%;
 }
 .slider__infos{
     position: absolute;
@@ -455,6 +472,12 @@ section{
 .footer{
     color: #fff;
     background-color: #df1653;
+    background-image: url('../img/nuage8.png'), url('../img/nuage7.png'), url('../img/nuage8.png'), url('../img/nuage7.png');
+    background-repeat: no-repeat;
+    background-position-x: 5%, -20%, 100%, 105%;
+    background-position-y: 90%, 70%, 70%, 0%;
+    background-size: 25%, 40%, 25%, 40%;
+    z-index: 5;
 }
 .footer .container {
     padding: 70px 0;
