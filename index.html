@@ -14,6 +14,7 @@
         <link href="headsupgrid/hugrid.css" type="text/css" rel="stylesheet" />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="headsupgrid/hugrid.js"></script>
+	    <script src="js/main.js"></script>
         <script type="text/javascript">
             definegrid = function() {
                 var browserWidth = $(window).width(); 
@@ -246,16 +247,6 @@
                 <blockquote>«Si vous jugez un poisson sur ses capacités à grimper à un arbre, il passera sa vie à croire qu’il est stupide.»</blockquote>
             </div>
             <svg class="curve curve--bottom" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <!-- <g>
-                    <defs>
-                        <linearGradient id="grad1">
-                            <stop offset="0%" stop-color="red"/>
-                            <stop offset="100%" stop-color="white" />
-                        </linearGradient>
-                    </defs>
-                    <polygon points="0,40 0,0 100,0" vector-effect="non-scaling-stroke" stroke="url(#grad1)" fill="url(#grad1)" />
-                    <path d="M-1,40 C10,120 90,120 101,0 Z" vector-effect="non-scaling-stroke" stroke="url(#grad1)" fill="url(#grad1)"/>
-                </g> -->
                 <g>
                     <polygon points="0,40 0,0 100,0" vector-effect="non-scaling-stroke" stroke="#82cbfe" fill="#82cbfe" />
                     <path d="M-1,40 C10,120 90,120 101,0 Z" vector-effect="non-scaling-stroke" stroke="#82cbfe" fill="#82cbfe"/>
@@ -308,8 +299,10 @@
                         <div class="slider__progress"> 
                             <div class="progress__bar"></div>
                         </div>
-                        <div class="slider__index"> 1/5 </div>
-                        <div class="slider__dot__container"><div class="dot"></div><div class="dot dot--active"></div><div class="dot"></div></div>
+                        <div class="slider__index"> / </div>
+                        <div class="slider__dot__container">
+                            <div class="dot dot--active"></div>
+                        </div>
                     </div>
                     <div class="conclusion">
                         <p>Merci d’avoir pris le temps de me lire. J’espère que mon projet vous a plus et qu’il vous plaira encore plus lorsqu’il sera disponible pour la version beta&#8239;!</p>
@@ -327,7 +320,7 @@
             </svg>
             <div class="container">
                 <p>Travail de fin d'année réalisé par Danielle Rogien elève de 2ème en <a class="link" title="Design Web et Mobile" href="http://dwm.re/" target="blank">DWM</a> à la Haute école Albert Jacquard de Namur (Belgique.)</p>
-                <p>Je tiens à remercier Emeline et Victoria pour leur aide lors de la réalisation des illustrations. Le jeu sera réalisé dans le courant de l’année 2019 dans le cadre de mon TFE.</p>
+                <p class="footer--small">Je tiens à remercier Emeline et Victoria pour leur aide lors de la réalisation des illustrations. Le jeu sera réalisé dans le courant de l’année 2019 dans le cadre de mon TFE.</p>
                 <div class="content">
                     <p>Me contacter:</p>
                     <ul>
@@ -347,13 +340,12 @@
                 
                 <nav>
                     <ul>
-                        <li><a href="#" class="link" target="blank">Side Project</a></li>
+                        <li><a href="#" class="link link--active" target="blank">Side Project</a></li>
                         <li><a href="#" class="link" target="blank">A Propos</a></li>
                         <li><a href="#" class="link" target="blank">Case Study</a></li>
                     </ul>
                 </nav>
             </div>
         </footer>
-	    <script src="js/main.js"></script>
     </body>
 </html>

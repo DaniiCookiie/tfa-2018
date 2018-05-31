@@ -229,7 +229,6 @@ section{
     content:"";
     width: 0%;
     height: 2px;
-    
     position: absolute;
     left:50%;
     bottom:0;
@@ -377,6 +376,7 @@ section{
 .why__content__text{
     width: 37%;
     padding-left: 15%;
+    position: relative;
 }
 .why__content__text--right{
     margin-top: 100px;
@@ -473,6 +473,7 @@ section{
     width: 50%;
     margin: 0 auto;
     margin-top: 400px;
+    position: relative;
 }
 
 /* FOOTER */
@@ -493,7 +494,8 @@ section{
     align-items: flex-start;
 }
 .footer .container > .content, .footer .container > p, .footer .container > nav{
-    width: 40%;
+    font-size: 0.9em;
+    width: 35%;
     margin: 0;
     padding-bottom: 50px;
 }
@@ -502,6 +504,9 @@ section{
     font-weight: bold;
     text-transform: uppercase;
     margin: 0px;
+}
+.footer--small{
+    font-size: 0.8em;
 }
 .footer .link{
     font-weight: bold;
