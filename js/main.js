@@ -3,10 +3,8 @@ $(document).ready(function(){
     $(".box").css('top','-50px');
     $(".box__img").css('top', '20%');
 
-    $(".why__content__text--left").css('opacity', 0);
-    $(".why__content__text--left").css('top', '-50px');
-    $(".why__content__text--right").css('opacity', 0);
-    $(".why__content__text--right").css('top', '-50px');
+    $(".why__content__text").css('opacity', 0);
+    $(".why__content__text").css('top', '-50px');
     $(".conclusion").css('opacity', 0);
     $(".conclusion").css('top', '-50px');
 
@@ -38,16 +36,11 @@ $(document).ready(function(){
     var sp_why_right = $(why_right).offset().top + h_why_right + 300;
     var h_conclusion = $(conclusion).height();
     var sp_conclusion = $(conclusion).offset().top + h_conclusion + 300;
+
+
       
     $(window).scroll(function(){
         var scrollCurrent = $(this).scrollTop();// taille du scroll - top de la page et top de l'ÃƒÂ©cran
-        //console.log('current scroll : '+scrollCurrent);
-
-        //animation de l'iphone avec parallax <3
-        if (((scrollCurrent / $('body').height()) * 500) < 170 ) {
-            $('.iphone').css('top', ((scrollCurrent / $('body').height()) * 500) + "px"); 
-        }
-        $('.team .content--flex').css('top', (((scrollCurrent / $('body').height() *2) * 300) - 400) + "px"); 
 
         //apparition du texte au scroll
         if (scrollCurrent > sp_why_left - windowHeight - h_why_left) {
