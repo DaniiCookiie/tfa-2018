@@ -11,40 +11,45 @@ $(document).ready(function(){
     $(".conclusion").css('top', '-50px');
 
     // --- variables
-    var windowHeight = window.innerHeight; // taille de l'ecran
-    var durationInterval = 400;
-    var iconDurationInterval = 200;
+    const windowHeight = window.innerHeight; // taille de l'ecran
+    const durationInterval = 400;
+    const iconDurationInterval = 200;
     
-    var firstBoxAnimated = $('.box:nth-child(1)');
-    var firstBoxAnimatedImage = $('#box__img--1');
-    var secondBoxAnimated = $('.box:nth-child(2)');
-    var secondBoxAnimatedImage = $('#box__img--2');
-    var thirdBoxAnimated = $('.box:nth-child(3)');
-    var thirdBoxAnimatedImage = $('#box__img--3');
-    var fourthBoxAnimated = $('.box:nth-child(4)');
-    var fourthBoxAnimatedImage = $('#box__img--4');
+    const firstBoxAnimated = $('.box:nth-child(1)');
+    const firstBoxAnimatedImage = $('#box__img--1');
+    const secondBoxAnimated = $('.box:nth-child(2)');
+    const secondBoxAnimatedImage = $('#box__img--2');
+    const thirdBoxAnimated = $('.box:nth-child(3)');
+    const thirdBoxAnimatedImage = $('#box__img--3');
+    const fourthBoxAnimated = $('.box:nth-child(4)');
+    const fourthBoxAnimatedImage = $('#box__img--4');
 
-    var why_left = $('.why__content__text--left');
-    var why_right = $('.why__content__text--right')
-    var conclusion = $('.conclusion');
+    const why_left = $('.why__content__text--left');
+    const why_right = $('.why__content__text--right')
+    const conclusion = $('.conclusion');
     
-        // h -> height
-        // sp -> scroll position  
-    var h_animatedBox = $(firstBoxAnimated).height();
-    var sp_animatedBox = $(firstBoxAnimated).offset().top + h_animatedBox + 300;
-
-    var h_why_left = $(why_left).height();
-    var sp_why_left = $(why_left).offset().top + h_why_left + 500;
-    var h_why_right = $(why_right).height();
-    var sp_why_right = $(why_right).offset().top + h_why_right + 500;
-    var h_conclusion = $(conclusion).height();
-    var sp_conclusion = $(conclusion).offset().top + h_conclusion + 500;
-
+    // h -> height
+    // sp -> scroll position  
+    const h_animatedBox = $(firstBoxAnimated).height();
+    const sp_animatedBox = $(firstBoxAnimated).offset().top + h_animatedBox + 300;
+    
+    const h_why_left = $(why_left).height();
+    const sp_why_left = $(why_left).offset().top + h_why_left + 500;
+    const h_why_right = $(why_right).height();
+    const sp_why_right = $(why_right).offset().top + h_why_right + 500;
+    const h_conclusion = $(conclusion).height();
+    const sp_conclusion = $(conclusion).offset().top + h_conclusion - 800;
+    
+    var curentSlideIndex = 1;
+    const nbrOfSlides = $('.slide').length;
+    const slideDuration = 6000;
 
     /* FONCTIONS */
     // --- Evenement scroll
+    console.log(sp_conclusion - windowHeight - h_conclusion);
     $(window).scroll(function(){
         var scrollCurrent = $(this).scrollTop();// taille du scroll - top de la page et top de l'ÃƒÂ©cran
+        console.log(scrollCurrent);
 
         //apparition du texte au scroll
         if (scrollCurrent > sp_why_left - windowHeight - h_why_left) {
@@ -85,10 +90,8 @@ $(document).ready(function(){
     });
 
     // --- Slider
-    var curentSlideIndex = 1;
-    var nbrOfSlides = $('.slide').length;
-    var slideDuration = 6000;
     
+    // --- création des dots
     for (var i = 1; i <= nbrOfSlides; i++) {
         if (i == 1) {
             $('.slider__dot__container').append('<div class="dot active" onclick="setSlideAt(1)"></div>');
