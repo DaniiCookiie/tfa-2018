@@ -52,5 +52,6 @@ else{
     echo ($badPrenom.' - prenom');
     echo ($badMail.' - mail');
     echo ($badTel.' - tel');
+    
 }
 ?>
