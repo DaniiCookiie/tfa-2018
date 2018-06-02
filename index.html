@@ -14,7 +14,6 @@
         <link href="headsupgrid/hugrid.css" type="text/css" rel="stylesheet" />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="headsupgrid/hugrid.js"></script>
-        <script src="js/parallax.js"></script>
 	    <script src="js/main.js"></script>
         <script type="text/javascript">
             definegrid = function() {
@@ -260,7 +259,6 @@
         <section class="slider">
             <div class="container">
                 <div class="content">
-
                     <div id="slide1" class="slide">
                         <img class="slide__img" src="img/visuel1.jpg" alt="visuel1" />
                         <div class="slide__content">
@@ -272,40 +270,49 @@
                         </div>
                     </div>
 
-                    <!-- <div class="slide">
-                        <h2>Personalisation</h2>
-                        <p>Aidy posera des questions à l’enfants afin d’en savoir plus sur lui, il lui demandera notament son sexe et son âge afin de cibler les exercices. 
-                            Mais aussi son prénom afin de persoanliserles dialogues.</p>
+                    <div id="slide2" class="slide">
+                        <img class="slide__img" src="img/visuel2.jpg" alt="visuel2" />
+                        <div class="slide__content">
+                            <h2>Personalisation</h2>
+                            <p>Aidy posera des questions à l’enfants afin d’en savoir plus sur lui, il lui demandera notament son sexe et son âge afin de cibler les exercices. 
+                                Mais aussi son prénom afin de persoanliserles dialogues.</p>
+                        </div>
                     </div>
 
-                    <div class="slide">
-                        <h2>Choix du personnage</h2>
-                        <p>L’enfant pourra donner sa date de naissance affin que son âge se mette à jour au fur et à mesure de l’utilisation du jeu. Il pourra aussi choisir son 
-                            avatar afin de s’y identifier. Pour le moment seuls deux personnages de type eurasien sont disponibles, par la suite l’enfant pourra choisir sa 
-                            couleur de cheveux et de peau.</p>
+                    <div id="slide3" class="slide">
+                        <img class="slide__img" src="img/visuel3.jpg" alt="visuel3" />
+                        <div class="slide__content">
+                            <h2>Choix du personnage</h2>
+                            <p>L’enfant pourra donner sa date de naissance affin que son âge se mette à jour au fur et à mesure de l’utilisation du jeu. Il pourra aussi choisir son 
+                                avatar afin de s’y identifier. Pour le moment seuls deux personnages de type eurasien sont disponibles, par la suite l’enfant pourra choisir sa 
+                                couleur de cheveux et de peau.</p>
+                        </div>
                     </div>
                     
-                    <div class="slide">
-                        <h2>Choix des exercices</h2>
-                        <p>Enfin le pingouin enmmera l’enfant dans son nid pour lui présenter les exercices disponibles. Sur la coquille de ceux-ci sont représenté les symboles 
-                            se rapportant aux exercices (dyslexie, dyscalculie, dyspraxie et dysphasie). Une fois l’exercice choisi, la coquille se fisure, l’oeuf s’ouvre et l’exercice sort de de celui-ci&#8239;!</p>
+                    <div id="slide4" class="slide">
+                        <img class="slide__img" src="img/visuel4.jpg" alt="visuel4" />
+                        <div class="slide__content">
+                            <h2>Choix des exercices</h2>
+                            <p>Enfin le pingouin enmmera l’enfant dans son nid pour lui présenter les exercices disponibles. Sur la coquille de ceux-ci sont représenté les symboles 
+                                se rapportant aux exercices (dyslexie, dyscalculie, dyspraxie et dysphasie). Une fois l’exercice choisi, la coquille se fisure, l’oeuf s’ouvre et l’exercice sort de de celui-ci&#8239;!</p>
+                        </div>
                     </div>
 
-                    <div class="slide">
-                        <h2>progression</h2>
-                        <p>Les exercices seront divers et varié et adapté à l’âge et aux difficultés de l’enfants. Au fur et à mesure des exercices, 
-                            l’enfant aura accès à sa progression afin de voir que lui aussi il peut y arriver.</p>
+                    <div id="slide5" class="slide">
+                        <img class="slide__img" src="img/visuel5.jpg" alt="visuel5" />
+                        <div class="slide__content">
+                            <h2>progression</h2>
+                            <p>Les exercices seront divers et varié et adapté à l’âge et aux difficultés de l’enfants. Au fur et à mesure des exercices, 
+                                l’enfant aura accès à sa progression afin de voir que lui aussi il peut y arriver.</p>
+                        </div>
                     </div>
-                </div> -->
 
                     <div class="slider__infos">
                         <div class="slider__progress"> 
                             <div class="progress__bar"></div>
                         </div>
                         <div class="slider__index"> / </div>
-                        <div class="slider__dot__container">
-                            <div class="dot dot--active"></div>
-                        </div>
+                        <div class="slider__dot__container"></div>
                     </div>
                     <div class="conclusion">
                         <p>Merci d’avoir pris le temps de me lire. J’espère que mon projet vous a plus et qu’il vous plaira encore plus lorsqu’il sera disponible pour la version beta&#8239;!</p>
@@ -350,12 +357,5 @@
                 </nav>
             </div>
         </footer>
-        <script>
-            var scene = document.getElementById('scene');
-            var parallaxInstance = new Parallax(scene, {
-                relativeInput: true,
-                hoverOnly: true,
-            });
-        </script>
     </body>
 </html>
