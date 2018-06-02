@@ -7,11 +7,21 @@ body{
     line-height: 32px;
     overflow-x: hidden;
 }
+@font-face {
+    font-family: "Paradise";
+    src: url("../font/Paradise.ttf");
+   }
 h1{
-    font-family: ;
-    font-size: 5em;
-    /*ombre portée*/
+    font-family: 'Paradise', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 5.55em;
+    text-align: center;
+    padding-top: 150px;
+    color: #fff;
+    text-shadow: -10px 6px 1px rgba(0, 0, 0, 0.15);
 }
+
 h2{
     font-size: 1.7em;
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +59,8 @@ ul{
     align-items: center;
 }
 .content{
-    width: 100%;
+    width: 55%;
+    margin: 0 auto;
     padding-bottom: 50px;
     position: relative;
 }
@@ -58,8 +69,9 @@ ul{
 .header{
     position: relative;
     width: 100%;
-    border-radius: 30%;
     margin-bottom: 70px;
+    height: 380px;
+    background: #82cbfe;
 }
 .nuage{
     position: absolute;
@@ -71,8 +83,9 @@ ul{
 }
 .nuage:nth-child(2){
     width: 18%;
-    top: 7%;
+    top: 10%;
     right: 15%;
+    z-index: 0;
     animation: cloud2-mouvement 12s infinite ease-in-out;
 }
 .nuage:nth-child(3){
@@ -94,7 +107,7 @@ ul{
     animation: cloud5-mouvement 14s infinite ease-in-out;
 }
 .nuage:nth-child(6){
-    width: 25%;
+    width: 20%;
     top: 50%;
     right: -5%;
     animation: cloud6-mouvement 11s infinite ease-in-out;
@@ -116,9 +129,6 @@ ul{
 .menu__list li{
     margin-left: 70px;
     padding: 8px 0;
-}
-.header__wrapper{
-    background: #82cbfe;
 }
 .header .content{
     margin: 0 auto;
@@ -198,7 +208,7 @@ section{
 /* TEXT */
 
 .text{
-    padding-top: 180px;
+    padding-top: 120px;
     background: url("../img/nuage2.png"), url("../img/nid.png");
     background-repeat: no-repeat;
     background-position-x: 5%, 75%;
@@ -206,8 +216,8 @@ section{
     background-size: 45%, 15%;
     z-index: -5;
 }
-.text .content{
-    width: 40%;
+.text .content p{
+    padding-bottom: 30px;
 }
 
 /* FOOTER */
@@ -244,6 +254,66 @@ section{
 }
 .footer .link{
     font-weight: bold;
+}
+/* CONTACT */
+
+.contact:before{
+    margin-top: 100px;
+}
+.contact{
+    padding-bottom: 60px;
+}
+.contact__form{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.contact__form__content{
+   padding: 0 25px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+       justify-content: space-between;
+   border-bottom: 1px solid #000;
+   margin: 30px 0;
+}
+.contact--text{
+    border: 1px solid #a4a4a4;
+    width: 65%;
+}
+.contact--text--message{
+    height: 150px;
+}
+label.error{
+    color: red;
+    font-size: .6em;
+}
+label.valid{
+    color: green;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+.btn{ 
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: #df1653;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 40%;
+    padding: 20px 0;
+}
+.btn__text{
+    text-align: center;
+    font-size: 1.2em;
 }
 
 /* ANIMATIONS */
@@ -340,10 +410,8 @@ section{
     .container{
         width: 94%;
     }
-    .content__flex{
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 40px 0;
+    .content{
+        width: 70%;
     }
     h2{
         font-size: 1.5em;
@@ -353,9 +421,7 @@ section{
         background-position-y: 25%, 65%;
         background-position-x: -30%, 75%;
     }
-    .text .content{
-        padding-left: 10%;
-    }
+
     .text{
         padding-top: 100px;
     }  
@@ -382,7 +448,9 @@ section{
     }
 }
 @media screen and (max-width: 768px){
-   
+   body{
+       font-size: 0.93em;
+   }
     .header .content{
         width: 96%;
     }
@@ -413,47 +481,69 @@ section{
         background-position-y: 40%, 20%, 90%, 80%;
         background-size: 50%, 70%, 50%, 70%;
     }
-    @keyframes eyes-movement{
-        0%   {left: 50%; top: 13%;}
-        15%	 {left: 50%; top: 13%;} 
-        20%	 {left: 52%; top: 12%;}
-        30%  {left: 52%; top: 12%;}
-        35%  {left: 48%; top: 12%;}
-        45%  {left: 48%; top: 12%;}
-        50%  {left: 50%; top: 13%;}
-        100% {left: 50%; top: 13%;}
+    label.valid{
+        width: 55%;
+        bottom: 0;
+        font-size: 0.8em;
+        line-height: 2em;
     }
-    @keyframes eyes-blink{
-        0%    {height:6px}
-        3%    {height:1px}
-        5%    {height:6px}
-        15%   {height:6px}
-        18%   {height:1px}
-        20%   {height:6px}
-        30%   {height:6px}
-        33%   {height:1px}
-        35%   {height:6px}
-        45%   {height:6px}
-        48%   {height:1px}
-        50%   {height:6px}
-        60%   {height:6px}
-        63%   {height:1px}
-        65%   {height:6px}
-        72%   {height:6px}
-        75%   {height:1px}
-        98%   {height:1px}
-        100%  {height:6px}
-    }
+
 }
 @media screen and (max-width: 640px){
     body{
         font-size: 16px;
     }
-    .header__ground{
+    h1{
+        position: absolute;
+        width: 70%;
+        font-size: 4em;
+        line-height: 70px;
+        left: 15%;
+        z-index: 1010;
+    }
+    .header{
+        height: 250px;
+    }
+    .nuage:nth-child(1){
+        top: 25%;
+    }
+    .nuage:nth-child(2){
+        top: 20%;
+    }
+    .nuage:nth-child(3){
         display: none;
+    }
+    .nuage:nth-child(4){
+        display: none;
+    }
+    .nuage:nth-child(5){
+        top: 55%;
+    }
+    .nuage:nth-child(6){
+        top: 55%;
+    }    
+    .contact--text{
+        padding: 10px 0;
+        margin-top: 5px;
+        width: 100%;
+    }
+    .text .content{
+        margin-bottom: 0;
     }
     .curve{
         display: none;
+    }
+    label.valid{
+        left: 55%;
+        width: 70%;
+        bottom: -75px;
+    }
+    .contact{
+        padding-bottom: 150px;
+    }
+    .btn{
+        right: initial;
+        left: 30%;
     }
     .footer{
         background-position-x: 5%, 20%, 0, 0;
@@ -467,3 +557,12 @@ section{
         width: 100%;
     }
 }
+@media screen and (max-width: 440px){
+    h1{
+        width: 100%;
+        left: 0;
+        font-size: 3.5em;
+    }
+
+}
+

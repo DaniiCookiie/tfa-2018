@@ -107,31 +107,30 @@
 
         <header class="header" id="scene">
             <div data-depth="0.2">
-                <img class="nuage" src="img/nuage6-header.png" alt="nuage6" />
-                <img class="nuage" src="img/nuage6-header.png" alt="nuage6" />
-                <img class="nuage" src="img/nuage5-header.png" alt="nuage5" />
-                <img class="nuage" src="img/nuage6-header.png" alt="nuage6" />
-                <img class="nuage" src="img/nuage5-header.png" alt="nuage5" />
-                <img class="nuage" src="img/nuage6-header.png" alt="nuage6" />
+                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
+                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
+                <img class="nuage" src="../img/nuage5-header.png" alt="nuage5" />
+                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
+                <img class="nuage" src="../img/nuage5-header.png" alt="nuage5" />
+                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
             </div>
             <nav class="menu">
                 <ul class="menu__list">
                     <li><a class="link">Side Project</a></li>
-                    <li><a class="link link--active">A propos</a></li>
+                    <li><a class="link link--active">À propos</a></li>
                     <li><a class="link">Case study</a></li>
                 </ul>
             </nav>
 
             <div class="header__wrapper">
                 <div class="content">
-                    <h1 class="hidden">A Propos</h1>
+                    <h1>À Propos</h1>
 
             </div>
             <svg class="header__ground" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <g>
                     <polygon points="0,40 0,0 100,0" vector-effect="non-scaling-stroke" stroke="#82cbfe" fill="#82cbfe" />
-                    <path d="M-1,40 C10,-10 90,-10 101,0 Z" vector-effect="non-scaling-stroke" stroke="#817373" fill="#817373"/>
-                    <path d="M-1,40 C10,120 90,120 101,0 Z" vector-effect="non-scaling-stroke" stroke="#817373" fill="#817373"/>
+                    <path d="M-1,40 C10,120 90,120 101,0 Z" vector-effect="non-scaling-stroke" stroke="#82cbfe" fill="#82cbfe"/>
                 </g>
             </svg>
         </header>
@@ -141,8 +140,8 @@
         <section class="text">
             <div class="container">
                 <div class="content">
-                    <h2>Hey#8239;!</h2>
-                    <p>Alors moi c’est Danielle, j’ai 21 ans et je suis étudiante en 2ème année en Design Web et Mobile à la Haute Ecole Albert Jacqurd de Namur (HEAJ) et je suis actuellement 
+                    <h2>Pssssst ! Je cherche un stage</h2>
+                    <p>Hey ! Alors moi c’est Danielle, j’ai 21 ans et je suis étudiante en 2ème année en Design Web et Mobile à la Haute Ecole Albert Jacqurd de Namur (HEAJ) et je suis actuellement 
                         à la rechercher d’un stage de 3 mois (novembre 2018 à janvier 2019) en Design (UI) et ergonomie/expérience utilisateur (UX) mais également en animations CSS. Le code pure et 
                         dure ce n’est pas trop mon truc mais je ne demande qu’à m’améliorer !</p>
 
@@ -153,10 +152,45 @@
             </div>
         </section>
 
-        <section class="form">
+                 <section class="contact" id="contact">
             <div class="container">
                 <div class="content">
+                    <h2>Contact</h2>
+                    <form class="contact__form" action="php/script.php" method="POST">
+                        <div class="contact__form__content">
+                            <label>Votre nom : </label>
+                            <input type="text" class="contact--text" name="nom">
+                        </div>
+                        <div class="contact__form__content">
+                            <label>Votre prénom : </label>
+                            <input type="text" class="contact--text" name="prenom">
+                        </div>
+                        <div class="contact__form__content">
+                            <label>Votre tel. :</label>
+                            <input type="tel" class="contact--text" name="tel">
+                        </div>
+                        <div class="contact__form__content">
+                            <label>Votre mail :</label>
+                            <input type="text" class="contact--text" name="mail">
+                        </div>
+                        <div class="contact__form__content">
+                            <label>Votre message :</label>
+                            <textarea class="contact--text contact--text--message" name="message"></textarea>
+                        </div>
                     
+                        <button type="submit" class="btn">
+                            <span class="btn__text">
+                                 Envoyer 
+                            </span>
+                        </button>
+                        <?php
+                            if(isset($_GET['valid'])){
+                                if($_GET['valid']==1){
+                                     echo '<label class="valid"> Merci pour votre message, je vous réponds dès que possible. </label>';
+                                }
+                            }
+                        ?>
+                    </form>
                 </div>
             </div>
         </section>
@@ -178,9 +212,6 @@
                         <li>email: danielle.rogien@gmail.com</li>
                     </ul>
                 </div>
-                
-                
-                
                 <div class="content">
                     <p>Établissement:</p>
                     <ul>
@@ -191,18 +222,11 @@
                 <nav>
                     <ul>
                         <li><a href="#" class="link" target="blank">Side Project</a></li>
-                        <li><a href="#" class="link  link--active" target="blank">A Propos</a></li>
+                        <li><a href="#" class="link  link--active" target="blank">À Propos</a></li>
                         <li><a href="#" class="link" target="blank">Case Study</a></li>
                     </ul>
                 </nav>
             </div>
         </footer>
-        <script>
-            var scene = document.getElementById('scene');
-            var parallaxInstance = new Parallax(scene, {
-                relativeInput: true,
-                hoverOnly: true,
-            });
-        </script>
     </body>
 </html>
