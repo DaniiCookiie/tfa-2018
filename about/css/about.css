@@ -250,17 +250,19 @@ section{
 .contact--text--message{
     height: 150px;
 }
-label.error{
-    color: red;
-    font-size: .6em;
-}
-label.valid{
+.message{
     color: green;
     position: absolute;
     left: 25%;
     width: 50%;
     transform: translateX(-50%);
     bottom: -15px;
+}
+.error{
+    color: red;
+}
+input.error{
+    border-color: red;
 }
 .btn{ 
     position: absolute;
@@ -490,7 +492,7 @@ label.valid{
         background-position-y: 40%, 20%, 90%, 80%;
         background-size: 50%, 70%, 50%, 70%;
     }
-    label.valid{
+    .message{
         width: 55%;
         bottom: 0;
         font-size: 0.8em;
@@ -541,7 +543,7 @@ label.valid{
     .curve{
         display: none;
     }
-    label.valid{
+    .message{
         left: 55%;
         width: 70%;
         bottom: -75px;

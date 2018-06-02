@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
     
@@ -158,20 +160,20 @@
                     <h2>Contact</h2>
                     <form class="contact__form" action="php/script.php" method="POST">
                         <div class="contact__form__content">
-                            <label>Votre nom : </label>
-                            <input type="text" class="contact--text" name="nom">
+                            <label class="<?php if($_GET['errors'][0]) echo 'error'; ?>">Votre nom : </label>
+                            <input type="text" class="contact--text <?php if($_GET['errors'][0]) echo 'error'; ?>" name="nom" value="<?php if(isset($_SESSION['nom'])) echo $_SESSION['nom']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label>Votre prénom : </label>
-                            <input type="text" class="contact--text" name="prenom">
+                            <label class="<?php if($_GET['errors'][1]) echo 'error'; ?>">Votre prénom : </label>
+                            <input type="text" class="contact--text <?php if($_GET['errors'][1]) echo 'error'; ?>" name="prenom" value="<?php if(isset($_SESSION['prenom'])) echo $_SESSION['prenom']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label>Votre tel. :</label>
-                            <input type="tel" class="contact--text" name="tel">
+                            <label class="<?php if($_GET['errors'][2]) echo 'error'; ?>">Votre tel. :</label>
+                            <input type="tel" class="contact--text <?php if($_GET['errors'][2]) echo 'error'; ?>" name="tel" value="<?php if(isset($_SESSION['tel'])) echo $_SESSION['tel']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label>Votre mail :</label>
-                            <input type="text" class="contact--text" name="mail">
+                            <label class="<?php if($_GET['errors'][3]) echo 'error'; ?>">Votre mail :</label>
+                            <input type="text" class="contact--text <?php if($_GET['errors'][3]) echo 'error'; ?>" name="mail" value="<?php if(isset($_SESSION['mail'])) echo $_SESSION['mail']; ?>">
                         </div>
                         <div class="contact__form__content">
                             <label>Votre message :</label>
@@ -186,7 +188,10 @@
                         <?php
                             if(isset($_GET['valid'])){
                                 if($_GET['valid']==1){
-                                     echo '<label class="valid"> Merci pour votre message, je vous réponds dès que possible. </label>';
+                                    echo '<label class="message"> Merci pour votre message, je vous réponds dès que possible. </label>';
+                                }
+                                else {
+                                    echo '<label class="message error"> Attention, ces champs ne sont pas corrects. </label>';
                                 }
                             }
                         ?>

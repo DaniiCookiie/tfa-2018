@@ -1,4 +1,11 @@
 <?php 
+
+if (!isset($_POST['nom']) || !isset($_POST['prenom']) || !isset($_POST['tel']) || !isset($_POST['mail'])) {
+    echo '<meta http-equiv="refresh" content="0;url=../index.php"/>';
+}
+
+session_start();
+
 $badNom=false;
 $badPrenom=false;
 $badTel=false;
@@ -44,14 +51,24 @@ if(!$badNom && !$badPrenom && !$badTel && !$badMail){
     echo $headers;
 
     mail($to, $subject, $message, $headers);
-    // echo '<meta http-equiv="refresh" content="0;url=../index.php?valid=1#contact"/>';
+    echo '<meta http-equiv="refresh" content="0;url=../index.php?valid=1#contact"/>';
+} else {
+    $_SESSION['nom'] = $_POST['nom'];
+    $_SESSION['prenom'] = $_POST['prenom'];
+    $_SESSION['tel'] = $_POST['tel'];
+    $_SESSION['mail'] = $_POST['mail'];
+    $_SESSION['message'] = $_POST['message'];
+
+    $errors = checkErr($badNom) . checkErr($badPrenom) . checkErr($badTel) . checkErr($badMail); 
+
+    echo '<meta http-equiv="refresh" content="0;url=../index.php?valid=0&errors='.$errors.'#contact"/>';
 }
-else{
-    echo ('<label class="error"> Le formulaire n\'a pas pu être validé, la prochaine fois, activez le javascript Nondidju !</label>');
-    echo ($badNom.' - nom');
-    echo ($badPrenom.' - prenom');
-    echo ($badMail.' - mail');
-    echo ($badTel.' - tel');
-    
+
+function checkErr($e){
+    if ($e == true) {
+        return '1';
+    }
+    return '0';
 }
+
 ?>
