@@ -1,4 +1,4 @@
-$(document).ready(function(){
+    $(document).ready(function(){
     /* --- INITIALISATION --- */
     // --- modification css si js est activé
     $(".box").css('opacity','0');
