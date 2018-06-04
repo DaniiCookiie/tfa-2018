@@ -118,9 +118,9 @@
             </div>
             <nav class="menu">
                 <ul class="menu__list">
-                    <li><a class="link">Side Project</a></li>
-                    <li><a class="link link--active">À propos</a></li>
-                    <li><a class="link">Case study</a></li>
+                    <li><a href="../" class="link">Side Project</a></li>
+                    <li><a href="" class="link link--active">À propos</a></li>
+                    <li><a href="../casestudy/" class="link">Case study</a></li>
                 </ul>
             </nav>
 
@@ -143,13 +143,13 @@
             <div class="container">
                 <div class="content">
                     <h2>Pssssst ! Je cherche un stage</h2>
-                    <p>Hey ! Alors moi c’est Danielle, j’ai 21 ans et je suis étudiante en 2ème année en Design Web et Mobile à la Haute Ecole Albert Jacqurd de Namur (HEAJ) et je suis actuellement 
-                        à la rechercher d’un stage de 3 mois (novembre 2018 à janvier 2019) en Design (UI) et ergonomie/expérience utilisateur (UX) mais également en animations CSS. Le code pure et 
-                        dure ce n’est pas trop mon truc mais je ne demande qu’à m’améliorer !</p>
+                    <p>Hey ! Alors moi c’est <strong>Danielle, j’ai 21 ans</strong> et je suis étudiante en 2ème année en <strong>Design Web et Mobile</strong> à la Haute Ecole Albert Jacqurd de Namur (HEAJ) et je suis actuellement 
+                        à la <strong>rechercher d’un stage</strong> de 3 mois (novembre 2018 à janvier 2019) en Design <strong>(UI)</strong> et ergonomie/expérience utilisateur <strong>(UX)</strong> mais également en animations CSS. Le code pure et 
+                        dure ce n’est pas trop mon truc mais <strong>je ne demande qu’à m’améliorer !</strong></p>
 
-                    <p>J’ai décidé de créer “Accroche-toi!” car étant moi-même dyslexique et dyscalculique j’aurais aimé disposer de ce genre d’outils étant petite.</p>
-                    <p>Vous pouvez allez jettez un oeil à ma VCard ou à mes projets si vous voulez en voir plus de mon travail, et si je vous intéresse pourquoi ne pas m’envoyer un petit mail ?</p>
-                    <p>A bientot j’espère !</p>
+                    <p>J’ai décidé de créer <strong>“Accroche-toi!”</strong> car étant moi-même dyslexique et dyscalculique j’aurais aimé disposer <strong>de ce genre d’outil</strong> étant petite.</p>
+                    <p>Vous pouvez allez jettez un oeil à ma <a href="http://www.danielle-rogien.be/projets/Vcard" class="link link--red">VCard</a> ou à <a href="http://www.danielle-rogien.be/projets" class="link link--red">mes projets</a> si vous voulez en voir plus <strong>de mon travail</strong>, et si je vous intéresse pourquoi ne pas m’envoyer <strong>un petit mail ?</strong></p>
+                    <p><strong>A bientot</strong> j’espère !</p>
                 </div>
             </div>
         </section>
@@ -160,20 +160,20 @@
                     <h2>Contact</h2>
                     <form class="contact__form" action="php/script.php" method="POST">
                         <div class="contact__form__content">
-                            <label class="<?php if($_GET['errors'][0]) echo 'error'; ?>">Votre nom : </label>
-                            <input type="text" class="contact--text <?php if($_GET['errors'][0]) echo 'error'; ?>" name="nom" value="<?php if(isset($_SESSION['nom'])) echo $_SESSION['nom']; ?>">
+                            <label class="<?php if(isset($_GET['errors'][0])) echo 'error'; ?>">Votre nom : </label>
+                            <input type="text" class="contact--text <?php if(isset($_GET['errors'][0])) echo 'error'; ?>" name="nom" value="<?php if(isset($_SESSION['nom'])) echo $_SESSION['nom']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label class="<?php if($_GET['errors'][1]) echo 'error'; ?>">Votre prénom : </label>
-                            <input type="text" class="contact--text <?php if($_GET['errors'][1]) echo 'error'; ?>" name="prenom" value="<?php if(isset($_SESSION['prenom'])) echo $_SESSION['prenom']; ?>">
+                            <label class="<?php if(isset($_GET['errors'][1])) echo 'error'; ?>">Votre prénom : </label>
+                            <input type="text" class="contact--text <?php if(isset($_GET['errors'][1])) echo 'error'; ?>" name="prenom" value="<?php if(isset($_SESSION['prenom'])) echo $_SESSION['prenom']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label class="<?php if($_GET['errors'][2]) echo 'error'; ?>">Votre tel. :</label>
-                            <input type="tel" class="contact--text <?php if($_GET['errors'][2]) echo 'error'; ?>" name="tel" value="<?php if(isset($_SESSION['tel'])) echo $_SESSION['tel']; ?>">
+                            <label class="<?php if(isset($_GET['errors'][2])) echo 'error'; ?>">Votre tel. :</label>
+                            <input type="tel" class="contact--text <?php if(isset($_GET['errors'][2])) echo 'error'; ?>" name="tel" value="<?php if(isset($_SESSION['tel'])) echo $_SESSION['tel']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label class="<?php if($_GET['errors'][3]) echo 'error'; ?>">Votre mail :</label>
-                            <input type="text" class="contact--text <?php if($_GET['errors'][3]) echo 'error'; ?>" name="mail" value="<?php if(isset($_SESSION['mail'])) echo $_SESSION['mail']; ?>">
+                            <label class="<?php if(isset($_GET['errors'][3])) echo 'error'; ?>">Votre mail :</label>
+                            <input type="text" class="contact--text <?php if(isset($_GET['errors'][3])) echo 'error'; ?>" name="mail" value="<?php if(isset($_SESSION['mail'])) echo $_SESSION['mail']; ?>">
                         </div>
                         <div class="contact__form__content">
                             <label>Votre message :</label>
@@ -188,10 +188,11 @@
                         <?php
                             if(isset($_GET['valid'])){
                                 if($_GET['valid']==1){
-                                    echo '<label class="message"> Merci pour votre message, je vous réponds dès que possible. </label>';
+                                    echo '<p class="message"> Merci pour votre message, je vous réponds dès que possible. </ps>';
                                 }
                                 else {
-                                    echo '<label class="message error"> Attention, ces champs ne sont pas corrects. </label>';
+                                    echo '<p class="message error"> Attention, ces champs* ne sont pas corrects. </p>
+                                            <p class="message error message--details"> *Les noms et prénoms doivent commencer par une majuscule, le numéro de téléphonne doit correspondre à un numéro de téléphonne, idem pour l\'adresse email. </p>';
                                 }
                             }
                         ?>
@@ -226,9 +227,9 @@
                 
                 <nav>
                     <ul>
-                        <li><a href="#" class="link" target="blank">Side Project</a></li>
-                        <li><a href="#" class="link  link--active" target="blank">À Propos</a></li>
-                        <li><a href="#" class="link" target="blank">Case Study</a></li>
+                        <li><a href="../" class="link" target="blank">Side Project</a></li>
+                        <li><a href="" class="link  link--active" target="blank">À Propos</a></li>
+                        <li><a href="../casestudy/" class="link" target="blank">Case Study</a></li>
                     </ul>
                 </nav>
             </div>
