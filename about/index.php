@@ -119,7 +119,7 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li><a href="../" class="link">Side Project</a></li>
-                    <li><a href="" class="link link--active">À propos</a></li>
+                    <li><a href="../about/" class="link link--active">À propos</a></li>
                     <li><a href="../casestudy/" class="link">Case study</a></li>
                 </ul>
             </nav>
@@ -228,7 +228,7 @@
                 <nav>
                     <ul>
                         <li><a href="../" class="link" target="blank">Side Project</a></li>
-                        <li><a href="" class="link  link--active" target="blank">À Propos</a></li>
+                        <li><a href="../about/" class="link  link--active" target="blank">À Propos</a></li>
                         <li><a href="../casestudy/" class="link" target="blank">Case Study</a></li>
                     </ul>
                 </nav>
