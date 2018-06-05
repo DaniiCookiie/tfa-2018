@@ -38,10 +38,17 @@ ul{
 .container{
     margin: 0 auto;
     width: 1075px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .content{
     width: 100%;
@@ -62,37 +69,43 @@ ul{
 .nuage:nth-child(1){
     width: 25%;
     top: 7%;
-    animation: cloud1-mouvement 11s infinite ease-in-out;
+    -webkit-animation: cloud1-mouvement 11s infinite ease-in-out;
+            animation: cloud1-mouvement 11s infinite ease-in-out;
 }
 .nuage:nth-child(2){
     width: 18%;
     top: 7%;
     right: 15%;
-    animation: cloud2-mouvement 12s infinite ease-in-out;
+    -webkit-animation: cloud2-mouvement 12s infinite ease-in-out;
+            animation: cloud2-mouvement 12s infinite ease-in-out;
 }
 .nuage:nth-child(3){
     width: 8%;
     top: 65%;
     left: 5%;
-    animation: cloud3-mouvement 14s infinite ease-in-out;
+    -webkit-animation: cloud3-mouvement 14s infinite ease-in-out;
+            animation: cloud3-mouvement 14s infinite ease-in-out;
 }
 .nuage:nth-child(4){
     width: 15%;
     top: 65%;
     left: 30%;
-    animation: cloud4-mouvement 12s infinite ease-in-out;
+    -webkit-animation: cloud4-mouvement 12s infinite ease-in-out;
+            animation: cloud4-mouvement 12s infinite ease-in-out;
 }
 .nuage:nth-child(5){
     width: 8%;
     top: 60%;
     right: 32%;
-    animation: cloud5-mouvement 14s infinite ease-in-out;
+    -webkit-animation: cloud5-mouvement 14s infinite ease-in-out;
+            animation: cloud5-mouvement 14s infinite ease-in-out;
 }
 .nuage:nth-child(6){
     width: 25%;
     top: 50%;
     right: -5%;
-    animation: cloud6-mouvement 11s infinite ease-in-out;
+    -webkit-animation: cloud6-mouvement 11s infinite ease-in-out;
+            animation: cloud6-mouvement 11s infinite ease-in-out;
 }
 .menu{
     width: 100%;
@@ -102,10 +115,19 @@ ul{
     font-weight: bold;
 }
 .menu__list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-right: 280px;
 }
 .menu__list li{
@@ -151,7 +173,8 @@ ul{
     position: absolute;
     top: 15%;
     left: 50%;
-    animation: eyes-movement 8s infinite linear;
+    -webkit-animation: eyes-movement 8s infinite linear;
+            animation: eyes-movement 8s infinite linear;
     z-index: 1005;
 }
 .pinguin__eyes::before{
@@ -162,7 +185,8 @@ ul{
     width: 8px;
     border-radius: 50%;
     background-color: #000;
-    animation: eyes-blink 8s infinite linear;
+    -webkit-animation: eyes-blink 8s infinite linear;
+            animation: eyes-blink 8s infinite linear;
     left: -27px;
 }
 .pinguin__eyes::after{
@@ -173,7 +197,8 @@ ul{
     width: 8px;
     border-radius: 50%;
     background-color: #000;
-    animation: eyes-blink 8s infinite linear;
+    -webkit-animation: eyes-blink 8s infinite linear;
+            animation: eyes-blink 8s infinite linear;
     left: 12px;
 }
 .pinguin__arm {
@@ -184,13 +209,19 @@ ul{
 }
 .pinguin__arm--left{
     left: 6.5%;
-    transform-origin: center right;
-    animation: left-arm-mouvement 8s infinite linear;
+    -webkit-transform-origin: center right;
+        -ms-transform-origin: center right;
+            transform-origin: center right;
+    -webkit-animation: left-arm-mouvement 8s infinite linear;
+            animation: left-arm-mouvement 8s infinite linear;
 }
 .pinguin__arm--right{
     right: 7.5%;
-    transform-origin: center left;
-    animation: right-arm-mouvement 8s infinite linear;
+    -webkit-transform-origin: center left;
+        -ms-transform-origin: center left;
+            transform-origin: center left;
+    -webkit-animation: right-arm-mouvement 8s infinite linear;
+            animation: right-arm-mouvement 8s infinite linear;
 }
 
 /* SECTION */
@@ -210,18 +241,30 @@ section{
 }
 .content__flex{
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     list-style: none;
     padding: 0;
     margin: 100px 0;
 }
 .link{
     color: #fff;
-    transition-duration: .4s;
+    -webkit-transition-duration: .4s;
+         -o-transition-duration: .4s;
+            transition-duration: .4s;
     cursor: pointer;
     position: relative;
 }
@@ -236,7 +279,7 @@ section{
     background-color: #fff;
     
     -webkit-transition: .35s ease;
-    -moz-transition: .35s ease;
+    -o-transition: .35s ease;
     transition: .35s ease;
 }
 .link:hover::after, .link:focus::after{
@@ -298,11 +341,21 @@ section{
     z-index: 5;
 }
 .avantage ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     height: 220px;
 }
 .avantage li{
@@ -345,7 +398,8 @@ section{
     background-color: #fff;
     width: 23%;
     height: 420px;
-    box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
+    -webkit-box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
+            box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
 }
 .box p{
     padding-top: 150px;
@@ -425,7 +479,8 @@ section{
     right: 0;
     top: 27%;
     padding: 5% 8%;
-    box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
+    -webkit-box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
+            box-shadow: -6px 7px 22px -5px rgba(0,0,0,0.38);
 }
 .slide__content h2, .slide__content p {
     position: relative;
@@ -437,10 +492,16 @@ section{
     color: #df1653;
     width: 30%;
     top: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .slider__progress{
     width: 70%;
@@ -460,10 +521,16 @@ section{
     font-size: 1.5em;
 }
 .slider__dot__container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .dot{
     width: 8px;
@@ -497,8 +564,12 @@ section{
 }
 .footer .container {
     padding: 70px 0;
-    justify-content: space-between;
-    align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 .footer .container > .content, .footer .container > p, .footer .container > nav{
     font-size: 0.9em;
@@ -521,35 +592,76 @@ section{
 
 /* ANIMATIONS */
 
+@-webkit-keyframes cloud1-mouvement{
+    0%   {left: -3%;}
+    50%  {left: 3%;}
+    100% {left: -3%;}
+}
+
 @keyframes cloud1-mouvement{
     0%   {left: -3%;}
     50%  {left: 3%;}
     100% {left: -3%;}
+}
+@-webkit-keyframes cloud2-mouvement{
+    0%   {right: 13%;}
+    50%  {right: 17%;}
+    100% {right: 13%;}
 }
 @keyframes cloud2-mouvement{
     0%   {right: 13%;}
     50%  {right: 17%;}
     100% {right: 13%;}
 }
+@-webkit-keyframes cloud3-mouvement{
+    0%   {left: 4%;}
+    50%  {left: 6%;}
+    100% {left: 4%;}
+}
 @keyframes cloud3-mouvement{
     0%   {left: 4%;}
     50%  {left: 6%;}
     100% {left: 4%;}
+}
+@-webkit-keyframes cloud4-mouvement{
+    0%   {left: 28%;}
+    50%  {left: 32%;}
+    100% {left: 28%;}
 }
 @keyframes cloud4-mouvement{
     0%   {left: 28%;}
     50%  {left: 32%;}
     100% {left: 28%;}
 }
+@-webkit-keyframes cloud5-mouvement{
+    0%   {right: 31%;}
+    50%  {right: 33%;}
+    100% {right: 31%;}
+}
 @keyframes cloud5-mouvement{
     0%   {right: 31%;}
     50%  {right: 33%;}
     100% {right: 31%;}
 }
+@-webkit-keyframes cloud6-mouvement{
+    0%   {right: -8%;}
+    50%  {right: -2%;}
+    100% {right: -8%;}
+}
 @keyframes cloud6-mouvement{
     0%   {right: -8%;}
     50%  {right: -2%;}
     100% {right: -8%;}
+}
+@-webkit-keyframes eyes-movement{
+	0%   {left: 50%; top: 15%;}
+	15%	 {left: 50%; top: 15%;} 
+    20%	 {left: 52%; top: 14%;}
+    30%  {left: 52%; top: 14%;}
+    35%  {left: 48%; top: 14%;}
+    45%  {left: 48%; top: 14%;}
+    50%  {left: 50%; top: 15%;}
+	100% {left: 50%; top: 15%;}
 }
 @keyframes eyes-movement{
 	0%   {left: 50%; top: 15%;}
@@ -560,6 +672,27 @@ section{
     45%  {left: 48%; top: 14%;}
     50%  {left: 50%; top: 15%;}
 	100% {left: 50%; top: 15%;}
+}
+@-webkit-keyframes eyes-blink{
+    0%    {height:8px}
+    3%    {height:1px}
+    5%    {height:8px}
+    15%   {height:8px}
+    18%   {height:1px}
+    20%   {height:8px}
+    30%   {height:8px}
+    33%   {height:1px}
+    35%   {height:8px}
+    45%   {height:8px}
+    48%   {height:1px}
+    50%   {height:8px}
+    60%   {height:8px}
+    63%   {height:1px}
+    65%   {height:8px}
+    72%   {height:8px}
+    75%   {height:1px}
+    98%   {height:1px}
+	100%  {height:8px}
 }
 @keyframes eyes-blink{
     0%    {height:8px}
@@ -582,35 +715,65 @@ section{
     98%   {height:1px}
 	100%  {height:8px}
 }
+@-webkit-keyframes left-arm-mouvement{
+    0%    {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    72.5% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    75%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    77.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    80%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    82.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    85%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    87.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    90%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    92.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    95%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    97.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    100%  {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+}
 @keyframes left-arm-mouvement{
-    0%    {transform: rotate(0deg)}
-    72.5% {transform: rotate(0deg)}
-    75%   {transform: rotate(-10deg)}
-    77.5% {transform: rotate(10deg)}
-    80%   {transform: rotate(-10deg)}
-    82.5% {transform: rotate(10deg)}
-    85%   {transform: rotate(-10deg)}
-    87.5% {transform: rotate(10deg)}
-    90%   {transform: rotate(-10deg)}
-    92.5% {transform: rotate(10deg)}
-    95%   {transform: rotate(-10deg)}
-    97.5% {transform: rotate(10deg)}
-    100%  {transform: rotate(0deg)}
+    0%    {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    72.5% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    75%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    77.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    80%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    82.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    85%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    87.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    90%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    92.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    95%   {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    97.5% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    100%  {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+}
+@-webkit-keyframes right-arm-mouvement{
+    0%    {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    72.5% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    75%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    77.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    80%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    82.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    85%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    87.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    90%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    92.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    95%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    97.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    100%  {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 @keyframes right-arm-mouvement{
-    0%    {transform: rotate(0deg)}
-    72.5% {transform: rotate(0deg)}
-    75%   {transform: rotate(10deg)}
-    77.5% {transform: rotate(-10deg)}
-    80%   {transform: rotate(10deg)}
-    82.5% {transform: rotate(-10deg)}
-    85%   {transform: rotate(10deg)}
-    87.5% {transform: rotate(-10deg)}
-    90%   {transform: rotate(10deg)}
-    92.5% {transform: rotate(-10deg)}
-    95%   {transform: rotate(10deg)}
-    97.5% {transform: rotate(-10deg)}
-    100%  {transform: rotate(0deg)}
+    0%    {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    72.5% {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    75%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    77.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    80%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    82.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    85%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    87.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    90%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    92.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    95%   {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
+    97.5% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg)}
+    100%  {-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 
 /* RESPONSIVE */
@@ -674,8 +837,11 @@ section{
         width: 94%;
     }
     .content__flex{
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin: 40px 0;
     }
     h2{
@@ -737,7 +903,8 @@ section{
     }
     .menu__list{
         padding-right: 0;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
 
     }
     .menu__list li{
@@ -749,7 +916,10 @@ section{
         background-size: 25%, 40%, 25%, 40%;
     }
     .footer .container{
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         width: 70%;
     }
     .footer .container > p, .footer .container > .content, .footer .container > nav{
@@ -782,7 +952,10 @@ section{
     }
     .container{
         width: 96%;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .concept{
         background-size: 60%, 25%;
@@ -836,10 +1009,25 @@ section{
         background-position-y: 40%, 20%, 90%, 80%;
         background-size: 50%, 70%, 50%, 70%;
     }
+    @-webkit-keyframes cloud5-mouvement{
+        0%   {right: 28%;}
+        50%  {right: 30%;}
+        100% {right: 28%;}
+    }
     @keyframes cloud5-mouvement{
         0%   {right: 28%;}
         50%  {right: 30%;}
         100% {right: 28%;}
+    }
+    @-webkit-keyframes eyes-movement{
+        0%   {left: 50%; top: 13%;}
+        15%	 {left: 50%; top: 13%;} 
+        20%	 {left: 52%; top: 12%;}
+        30%  {left: 52%; top: 12%;}
+        35%  {left: 48%; top: 12%;}
+        45%  {left: 48%; top: 12%;}
+        50%  {left: 50%; top: 13%;}
+        100% {left: 50%; top: 13%;}
     }
     @keyframes eyes-movement{
         0%   {left: 50%; top: 13%;}
@@ -850,6 +1038,27 @@ section{
         45%  {left: 48%; top: 12%;}
         50%  {left: 50%; top: 13%;}
         100% {left: 50%; top: 13%;}
+    }
+    @-webkit-keyframes eyes-blink{
+        0%    {height:6px}
+        3%    {height:1px}
+        5%    {height:6px}
+        15%   {height:6px}
+        18%   {height:1px}
+        20%   {height:6px}
+        30%   {height:6px}
+        33%   {height:1px}
+        35%   {height:6px}
+        45%   {height:6px}
+        48%   {height:1px}
+        50%   {height:6px}
+        60%   {height:6px}
+        63%   {height:1px}
+        65%   {height:6px}
+        72%   {height:6px}
+        75%   {height:1px}
+        98%   {height:1px}
+        100%  {height:6px}
     }
     @keyframes eyes-blink{
         0%    {height:6px}
@@ -955,7 +1164,10 @@ section{
         background-size: 80%, 100%, 0, 0;
     }
     .footer .container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .footer .container > .content, .footer .container > p, .footer .container > nav{
         width: 100%;
@@ -971,6 +1183,17 @@ section{
     .box__img{
         width: 35%;
         left: 32.5%;
+    }
+
+    @-webkit-keyframes eyes-movement{
+        0%   {left: 50%; top: 10%;}
+        15%	 {left: 50%; top: 10%;} 
+        20%	 {left: 52%; top: 9%;}
+        30%  {left: 52%; top: 9%;}
+        35%  {left: 48%; top: 9%;}
+        45%  {left: 48%; top: 9%;}
+        50%  {left: 50%; top: 10%;}
+        100% {left: 50%; top: 10%;}
     }
 
     @keyframes eyes-movement{
@@ -990,6 +1213,16 @@ section{
     }
     .pinguin__eyes::after{
         left: -16px;
+    }
+    @-webkit-keyframes eyes-movement{
+        0%   {left: 50%; top: 3%;}
+        15%	 {left: 50%; top: 3%;} 
+        20%	 {left: 52%; top: 2%;}
+        30%  {left: 52%; top: 2%;}
+        35%  {left: 48%; top: 2%;}
+        45%  {left: 48%; top: 2%;}
+        50%  {left: 50%; top: 3%;}
+        100% {left: 50%; top: 3%;}
     }
     @keyframes eyes-movement{
         0%   {left: 50%; top: 3%;}
