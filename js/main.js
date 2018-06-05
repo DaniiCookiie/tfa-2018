@@ -42,7 +42,7 @@
     
     var curentSlideIndex = 1;
     const nbrOfSlides = $('.slide').length;
-    const slideDuration = 10000;
+    const slideDuration = 20000;
 
     /* FONCTIONS */
     // --- Evenement scroll

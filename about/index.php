@@ -140,12 +140,12 @@
             <div class="container">
                 <div class="content">
                     <h2>Pssssst ! Je cherche un stage</h2>
-                    <p>Hey ! Alors moi c’est <strong>Danielle, j’ai 21 ans</strong> et je suis étudiante en 2ème année en <strong>Design Web et Mobile</strong> à la Haute Ecole Albert Jacqurd de Namur (HEAJ) et je suis actuellement 
-                        à la <strong>rechercher d’un stage</strong> de 3 mois (novembre 2018 à janvier 2019) en Design <strong>(UI)</strong> et ergonomie/expérience utilisateur <strong>(UX)</strong> mais également en animations CSS. Le code pure et 
-                        dure ce n’est pas trop mon truc mais <strong>je ne demande qu’à m’améliorer !</strong></p>
+                    <p>Hey ! Alors moi c’est <strong>Danielle, j’ai 21 ans</strong> et je suis étudiante en 2ème année en <strong>Design Web et Mobile</strong> à la Haute Ecole Albert Jacquard de Namur (HEAJ) et je suis actuellement 
+                        à la <strong>recherche d’un stage</strong> de 3 mois (novembre 2018 à janvier 2019) en design <strong>(UI)</strong> et ergonomie/expérience utilisateur <strong>(UX)</strong> mais également en animations CSS. Le code pur et 
+                        dur ce n’est pas trop mon truc mais <strong>je ne demande qu’à m’améliorer !</strong></p>
 
                     <p>J’ai décidé de créer <strong>“Accroche-toi!”</strong> car étant moi-même dyslexique et dyscalculique j’aurais aimé disposer <strong>de ce genre d’outil</strong> étant petite.</p>
-                    <p>Vous pouvez allez jettez un oeil à ma <a href="http://www.danielle-rogien.be/projets/Vcard" class="link link--red">VCard</a> ou à <a href="http://www.danielle-rogien.be/projets" class="link link--red">mes projets</a> si vous voulez en voir plus <strong>de mon travail</strong>, et si je vous intéresse pourquoi ne pas m’envoyer <strong>un petit mail ?</strong></p>
+                    <p>Vous pouvez allez jettez un oeil à ma <a href="http://www.danielle-rogien.be/projets/Vcard" class="link link--red">VCard</a> ou à <a href="http://www.danielle-rogien.be/projets" class="link link--red">mes projets</a> si vous voulez en voir plus, et si je vous intéresse pourquoi ne pas m’envoyer <strong>un petit mail ?</strong></p>
                     <p><strong>A bientot</strong> j’espère !</p>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                 </g>
             </svg>
             <div class="container">
-                <p>Travail de fin d'année réalisé par Danielle Rogien elève de 2ème en <a class="link" title="Design Web et Mobile" href="http://dwm.re/" target="blank">DWM</a> à la Haute école Albert Jacquard de Namur (Belgique.)</p>
+                <p>Travail de fin d'année réalisé par Danielle Rogien élève de 2ème en <a class="link" title="Design Web et Mobile" href="http://dwm.re/" target="blank">DWM</a> à la Haute école Albert Jacquard de Namur (Belgique.)</p>
                 <p class="footer--small">Je tiens à remercier Emeline et Victoria pour leur aide lors de la réalisation des illustrations. Le jeu sera réalisé dans le courant de l’année 2019 dans le cadre de mon TFE.</p>
                 <div class="content">
                     <p>Me contacter:</p>
