@@ -15,9 +15,7 @@
         <link rel="stylesheet" href="css/about.css"/>
         <link href="../headsupgrid/hugrid.css" type="text/css" rel="stylesheet" />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="headsupgrid/hugrid.js"></script>
-        <script src="js/parallax.js"></script>
-	    <script src="js/main.js"></script>
+        <script src="../headsupgrid/hugrid.js"></script>
         <script type="text/javascript">
             definegrid = function() {
                 var browserWidth = $(window).width(); 
@@ -108,14 +106,12 @@
     <body>
 
         <header class="header" id="scene">
-            <div data-depth="0.2">
-                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
-                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
-                <img class="nuage" src="../img/nuage5-header.png" alt="nuage5" />
-                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
-                <img class="nuage" src="../img/nuage5-header.png" alt="nuage5" />
-                <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
-            </div>
+            <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
+            <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
+            <img class="nuage" src="../img/nuage5-header.png" alt="nuage5" />
+            <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
+            <img class="nuage" src="../img/nuage5-header.png" alt="nuage5" />
+            <img class="nuage" src="../img/nuage6-header.png" alt="nuage6" />
             <nav class="menu">
                 <ul class="menu__list">
                     <li><a href="../" class="link">Side Project</a></li>

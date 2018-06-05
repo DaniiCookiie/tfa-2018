@@ -46,10 +46,10 @@
 
     /* FONCTIONS */
     // --- Evenement scroll
-    console.log(sp_conclusion - windowHeight - h_conclusion);
+    // console.log(sp_conclusion - windowHeight - h_conclusion);
     $(window).scroll(function(){
         var scrollCurrent = $(this).scrollTop();// taille du scroll - top de la page et top de l'ÃƒÂ©cran
-        console.log(scrollCurrent);
+        // console.log(scrollCurrent);
 
         //apparition du texte au scroll
         if (scrollCurrent > sp_why_left - windowHeight - h_why_left) {
@@ -90,42 +90,68 @@
     });
 
     // --- Slider
-    
+    var timeOutNextSlide;
+    var timeOutShowSlide;
+    var timeOutAutoSlide;
+    var timeOutTick;
     // --- création des dots
     for (var i = 1; i <= nbrOfSlides; i++) {
         if (i == 1) {
-            $('.slider__dot__container').append('<div class="dot active" onclick="setSlideAt(1)"></div>');
+            $('.slider__dot__container').append('<div class="dot active" data-value="1"></div>');
         } else {
-            $('.slider__dot__container').append('<div class="dot" onclick="setSlideAt('+i+')"></div>');
+            $('.slider__dot__container').append('<div class="dot" data-value="'+i+'"></div>');
         }
     }
 
     showSlides(curentSlideIndex);
-    setTimeout(autoNextSlide, 5000);
+    timeOutAutoSlide = setTimeout(autoNextSlide, slideDuration - 950);
+
+    $('.slide__img').click(() => {
+        clearTimeout(timeOutAutoSlide);
+        clearTimeout(timeOutNextSlide);
+        clearTimeout(timeOutTick);
+        timeOutAutoSlide = setTimeout(autoNextSlide, slideDuration);
+        setNextSlide();
+    });
+    $('.dot').click(function(){
+        const dotValue = $(this).attr('data-value');
+        curentSlideIndex = dotValue;
+        clearTimeout(timeOutAutoSlide);
+        clearTimeout(timeOutNextSlide);
+        clearTimeout(timeOutTick);
+        timeOutAutoSlide = setTimeout(autoNextSlide, slideDuration - 950);
+        setSlideAt(dotValue);
+    })
 
     function setPreviousSlide() {
         showSlides(curentSlideIndex -= 1);
     }
 
     function setNextSlide() {
-        animOut($('#slide'+curentSlideIndex+' .slide__img'), 'left', 1000);
-        setTimeout(
+        curentSlideIndex = parseInt($('.slider__index').html().split('/')[0]);
+        timeOutNextSlide = setTimeout(
             () => {
-                animOut($('#slide'+curentSlideIndex+' .slide__content'), 'right', 1000),
+                animOut($('#slide'+curentSlideIndex+' .slide__img'), 'left', 1000);
                 setTimeout(
                     () => {
-                        animOut($('#slide'+curentSlideIndex+' .slide__content h2, #slide'+curentSlideIndex+' .slide__content p'), 'left', 1000),
+                        animOut($('#slide'+curentSlideIndex+' .slide__content'), 'right', 1000),
                         setTimeout(
                             () => {
-                                showSlides(curentSlideIndex += 1);
+                                animOut($('#slide'+curentSlideIndex+' .slide__content h2, #slide'+curentSlideIndex+' .slide__content p'), 'left', 1000),
+                                setTimeout(
+                                    () => {
+                                        showSlides(curentSlideIndex += 1);
+                                    },
+                                    350,
+                                )
                             },
-                            350,
+                            300,
                         )
                     },
                     300,
                 )
             },
-            300,
+            0
         )
     }
 
@@ -135,7 +161,7 @@
 
     function autoNextSlide() {
         setNextSlide();
-        setTimeout(autoNextSlide, slideDuration);
+        timeOutTick = setTimeout(autoNextSlide, slideDuration);
     }
 
     function showSlides(index) {
@@ -167,16 +193,21 @@
         dots[curentSlideIndex - 1].className += ' active';
         sliderIndex.html(curentSlideIndex+"/"+nbrOfSlides);
         
-        anim($('#slide'+curentSlideIndex+' .slide__img'), 'left', 1000);
-        setTimeout(
+        timeOutShowSlide = setTimeout(
             () => {
-                anim($('#slide'+curentSlideIndex+' .slide__content'), 'right', 1000),
+                anim($('#slide'+curentSlideIndex+' .slide__img'), 'left', 1000);
                 setTimeout(
-                    anim($('#slide'+curentSlideIndex+' .slide__content h2, #slide'+curentSlideIndex+' .slide__content p'), 'left', 1000),
+                    () => {
+                        anim($('#slide'+curentSlideIndex+' .slide__content'), 'right', 1000),
+                        setTimeout(
+                            anim($('#slide'+curentSlideIndex+' .slide__content h2, #slide'+curentSlideIndex+' .slide__content p'), 'left', 1000),
+                            300,
+                        )
+                    },
                     300,
                 )
             },
-            300,
+            0
         )
 
         progressBar.css('width', '0');
