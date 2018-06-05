@@ -10,13 +10,15 @@
 
         <meta name='viewport' content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat:400,700|Open+Sans:400,700|Quicksand:400,700" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
         <link rel="stylesheet" href="css/about.css"/>
         <link href="../headsupgrid/hugrid.css" type="text/css" rel="stylesheet" />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="../headsupgrid/hugrid.js"></script>
-        <script type="text/javascript">
+        <script>
             definegrid = function() {
                 var browserWidth = $(window).width(); 
                 if (browserWidth > 1440) 
@@ -123,7 +125,7 @@
             <div class="header__wrapper">
                 <div class="content">
                     <h1>À Propos</h1>
-
+                </div>
             </div>
             <svg class="header__ground" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <g>
@@ -131,7 +133,6 @@
                     <path d="M-1,40 C10,120 90,120 101,0 Z" vector-effect="non-scaling-stroke" stroke="#82cbfe" fill="#82cbfe"/>
                 </g>
             </svg>
-        </header>
         </header>
         
         
@@ -184,7 +185,7 @@
                         <?php
                             if(isset($_GET['valid'])){
                                 if($_GET['valid']==1){
-                                    echo '<p class="message"> Merci pour votre message, je vous réponds dès que possible. </ps>';
+                                    echo '<p class="message"> Merci pour votre message, je vous réponds dès que possible. </p>';
                                 }
                                 else {
                                     echo '<p class="message error"> Attention, ces champs* ne sont pas corrects. </p>

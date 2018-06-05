@@ -8,14 +8,16 @@
 
         <meta name='viewport' content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat:400,700|Open+Sans:400,700|Quicksand:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
         <link rel="stylesheet" href="css/style.css"/>
         <link href="headsupgrid/hugrid.css" type="text/css" rel="stylesheet" />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="headsupgrid/hugrid.js"></script>
 	    <script src="js/main.js"></script>
-        <script type="text/javascript">
+        <script>
             definegrid = function() {
                 var browserWidth = $(window).width(); 
                 if (browserWidth > 1440) 
@@ -142,6 +144,7 @@
                 </g>
             </svg>
             <div class="header__ground header__ground--mobile">
+            </div>
         </header>
         
         
@@ -237,7 +240,7 @@
             </div>
         </section>
 
-        <section class="citation">
+        <div class="citation">
             <svg class="curve" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <g>
                     <polygon points="0,40 0,0 100,0" vector-effect="non-scaling-stroke" stroke="#fff" fill="#fff" />
@@ -253,7 +256,7 @@
                     <path d="M-1,40 C10,120 90,120 101,0 Z" vector-effect="non-scaling-stroke" stroke="#82cbfe" fill="#82cbfe"/>
                 </g>
             </svg>
-        </section>
+        </div>
 
         <section class="slider">
             <div class="container">

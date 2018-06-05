@@ -386,6 +386,7 @@ section{
 /* CITATION */
 
 .citation{
+    position: relative;
     background: #82cbfe;
 }
 .citation blockquote{
