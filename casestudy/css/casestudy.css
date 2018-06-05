@@ -267,11 +267,14 @@ section{
     width: 45%;
 }
 .content__img{
-    width: 35%;
+    width: 25%;
 }
 
 .intro{
     padding-top: 150px;
+    background: url('../img/croquis-aidy.jpg');
+    background-repeat: no-repeat;
+    background-size: 15%;
 }
 
 /* skills */
@@ -327,6 +330,9 @@ section{
 /* PROBLEM */
 .problem{
     padding-top: 150px;
+    background: url('../img/croquis-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 40%;
 }
 .problem .content{
     width: 55%;
@@ -340,6 +346,11 @@ section{
 }
 
 /* PAGE */
+.page{
+    background: url('../img/croquis-nid.jpg'), url('../img/before-after.jpg');
+    background-repeat: no-repeat;
+    background-size: 15%, 15%;
+}
 .page .content{
     display: flex;
     justify-content: space-around;
@@ -350,6 +361,12 @@ section{
 }
 
 /* DEFI */
+
+.defi{
+    background: url('../img/stabilo-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
 
 .defi--title{
     font-family:  'Montserrat', sans-serif;
@@ -383,6 +400,11 @@ section{
 
 /* CONCEPT */
 
+.code{
+    background: url('../img/aidy-banner.jpg'), url('../img/logo-black.jpg');
+    background-repeat: no-repeat;
+    background-size: 40%, 20%;
+}
 .concept .content{
     width: 55%;
     margin: 0;
