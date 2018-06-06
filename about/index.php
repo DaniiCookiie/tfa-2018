@@ -145,7 +145,7 @@
                         dur ce n’est pas trop mon truc mais <strong>je ne demande qu’à m’améliorer !</strong></p>
 
                     <p>J’ai décidé de créer <strong>“Accroche-toi!”</strong> car étant moi-même dyslexique et dyscalculique j’aurais aimé disposer <strong>de ce genre d’outil</strong> étant petite.</p>
-                    <p>Vous pouvez allez jettez un oeil à ma <a href="http://www.danielle-rogien.be/projets/Vcard" class="link link--red">VCard</a> ou à <a href="http://www.danielle-rogien.be/projets" class="link link--red">mes projets</a> si vous voulez en voir plus, et si je vous intéresse pourquoi ne pas m’envoyer <strong>un petit mail ?</strong></p>
+                    <p>Vous pouvez allez jeter un oeil à ma <a href="http://www.danielle-rogien.be/projets/Vcard" class="link link--red">VCard</a> ou à <a href="http://www.danielle-rogien.be/projets" class="link link--red">mes projets</a> si vous voulez en voir plus, et si je vous intéresse pourquoi ne pas m’envoyer <strong>un petit mail ?</strong></p>
                     <p><strong>A bientot</strong> j’espère !</p>
                 </div>
             </div>
@@ -165,11 +165,11 @@
                             <input type="text" class="contact--text <?php if(isset($_GET['errors'][1])) echo 'error'; ?>" name="prenom" value="<?php if(isset($_SESSION['prenom'])) echo $_SESSION['prenom']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label class="<?php if(isset($_GET['errors'][2])) echo 'error'; ?>">Votre tel. :</label>
+                            <label class="<?php if(isset($_GET['errors'][2])) echo 'error'; ?>">Votre tél. :</label>
                             <input type="tel" class="contact--text <?php if(isset($_GET['errors'][2])) echo 'error'; ?>" name="tel" value="<?php if(isset($_SESSION['tel'])) echo $_SESSION['tel']; ?>">
                         </div>
                         <div class="contact__form__content">
-                            <label class="<?php if(isset($_GET['errors'][3])) echo 'error'; ?>">Votre mail :</label>
+                            <label class="<?php if(isset($_GET['errors'][3])) echo 'error'; ?>">Votre Email :</label>
                             <input type="text" class="contact--text <?php if(isset($_GET['errors'][3])) echo 'error'; ?>" name="mail" value="<?php if(isset($_SESSION['mail'])) echo $_SESSION['mail']; ?>">
                         </div>
                         <div class="contact__form__content">
@@ -189,7 +189,7 @@
                                 }
                                 else {
                                     echo '<p class="message error"> Attention, ces champs* ne sont pas corrects. </p>
-                                            <p class="message error message--details"> *Les noms et prénoms doivent commencer par une majuscule, le numéro de téléphonne doit correspondre à un numéro de téléphonne, idem pour l\'adresse email. </p>';
+                                            <p class="message error message--details"> *Les noms et prénoms doivent commencer par une majuscule, le numéro de téléphonne doit correspondre à un numéro de téléphone, idem pour l\'adresse email. </p>';
                                 }
                             }
                         ?>
