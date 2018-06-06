@@ -206,7 +206,7 @@
                 </g>
             </svg>
             <div class="container">
-                <p>Travail de fin d'année réalisé par Danielle Rogien élève de 2ème en <a class="link" title="Design Web et Mobile" href="http://dwm.re/" target="blank">DWM</a> à la Haute école Albert Jacquard de Namur (Belgique.)</p>
+                <p>Travail de fin d'année réalisé par Danielle Rogien, élève de 2ème en <a class="link" title="Design Web et Mobile" href="http://dwm.re/" target="blank">DWM</a> à la Haute école Albert Jacquard de Namur (Belgique).</p>
                 <p class="footer--small">Je tiens à remercier Emeline et Victoria pour leur aide lors de la réalisation des illustrations. Le jeu sera réalisé dans le courant de l’année 2019 dans le cadre de mon TFE.</p>
                 <div class="content">
                     <p>Me contacter:</p>
