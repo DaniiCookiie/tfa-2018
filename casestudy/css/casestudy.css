@@ -84,7 +84,7 @@ figcaption{
     background-color: #000;
     -webkit-animation: eyes-blink 8s infinite linear;
             animation: eyes-blink 8s infinite linear;
-    left: -27px;
+    left: -35px
 }
 .pinguin__eyes::after{
     content: '';
@@ -96,7 +96,7 @@ figcaption{
     background-color: #000;
     -webkit-animation: eyes-blink 8s infinite linear;
             animation: eyes-blink 8s infinite linear;
-    left: 12px;
+    left: 19px;
 }
 .pinguin__arm {
     position: absolute;
@@ -296,6 +296,12 @@ section{
 }
 
 /* INTRO */
+.intro {
+    background: url('../../img/nuage1.png'), url('../../img/nuage1.png');
+    background-repeat: no-repeat;
+    background-size: 25%, 30%;
+    background-position: -5% 90%, 110% 100%;
+}
 .intro .content{
     width: 100%;
     display: -webkit-box;
@@ -382,6 +388,10 @@ section{
 /* PROBLEM */
 .problem{
     padding-top: 150px;
+    background: url('../../img/nuage2.png'), url('../../img/nuage2.png'), url('../../img/nuage1.png');
+    background-repeat: no-repeat;
+    background-size: 20%, 25%, 30%;
+    background-position: 50% 20%, -10% 40%, 110% 60%;
 }
 .problem .content{
     width: 100%;
@@ -391,12 +401,24 @@ section{
 }
 
 /* PROJECT */
+.project{
+    background: url('../../img/nuage1.png');
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: -5% 50%;
+}
 .project .content{
     padding-top: 75px;
     margin-left: 55%;
 }
 
 /* PAGE */
+.page {
+    background: url('../../img/nuage2.png'), url('../../img/nuage2.png'), url('../../img/nuage1.png');
+    background-repeat: no-repeat;
+    background-size: 20%, 25%, 30%;
+    background-position: 105% 20%, 10% 40%, 110% 90%;
+}
 .page .content{
     padding-top: 75px;
     width: 100%;
@@ -411,7 +433,12 @@ section{
             align-items: center
 }
 /* DEFI */
-
+.defi {
+    background: url('../../img/nuage1.png'), url('../../img/nuage1.png'), url('../../img/nuage2.png'), url('../../img/nuage2.png'), url('../../img/nuage1.png');
+    background-repeat: no-repeat;
+    background-size: 15%, 15%, 30%, 30%, 15%;
+    background-position: -5% 30%, 105% 40%, -10% 45%, 110% 60%, -5% 75%;
+}
 .defi--title{
     background: #82cbfe;
     margin: 0;
@@ -435,7 +462,12 @@ section{
     width: 100%;
 }
 /* CODE */
-
+.code {
+    background: url('../../img/nuage1.png'), url('../../img/nuage2.png');
+    background-repeat: no-repeat;
+    background-size: 25%, 30%;
+    background-position: -5% 15%, 110% 50%;
+}
 .code .content{
     padding-top: 75px;
     margin: 0;
@@ -443,7 +475,12 @@ section{
 
 
 /* CONCEPT */
-
+.concept {
+    background: url('../../img/nuage1.png'), url('../../img/nuage2.png'), url('../../img/nuage2.png');
+    background-repeat: no-repeat;
+    background-size: 25%, 30%, 30%;
+    background-position: 110% 10%, -10% 40%, 110% 80%;
+}
 .concept .container{
     padding-top: 75px;
 }
@@ -712,6 +749,12 @@ section{
     }
     .pinguin{
         width: 25%;
+    }
+    .pinguin__eyes::after{
+        left: 12px;
+    }
+    .pinguin__eyes::before{
+        left: -27px;
     }
     .container{
         width: 960px;
