@@ -823,6 +823,27 @@ section{
         background-position-y: 0, 100%;
         background-size: 0, 50%;
     }
+    .concept{
+        background-size: 35%, 50%, 50%;
+    }
+    .code{
+        background-size: 35%, 45%;
+    }
+    .defi{
+        background-size: 45%, 25%, 40%, 40%, 45%;
+    }
+    .page{
+         background-size: 40%, 45%, 60%;
+    }
+    .project{
+        background-size: 40%;
+    }
+    .problem{
+        background-size: 40%, 45%, 60%;
+    }
+    .intro{
+        background-size: 40%, 50%;
+    }
     .menu__list{
         padding-right: 0;
         -ms-flex-pack: distribute;
